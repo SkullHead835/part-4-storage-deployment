@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 { text-align: center; margin-bottom: 30px; }
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+#city-input {
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  width: 280px;
+}
+
+#search-btn {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#search-btn:hover { background: #ff4757; }
+
+.recent-searches-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.recent-searches-section h4 {
+  margin: 0 0 10px 0;
+  color: #eee;
+}
+
+#recent-searches-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.recent-search-btn {
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.recent-search-btn:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-2px);
+}
+
+.clear-history-btn {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #ffcccc;
+  color: #ffdddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-history-btn:hover { background: rgba(255,100,100,0.3); }
+
+#weather-display {
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.welcome-message, .error-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .search-section { flex-direction: column; align-items: center; }
+  #city-input { width: 90%; }
+}
